@@ -1,0 +1,29 @@
+{
+  "name": "Hacker-School-Places",
+  "version": "0.0.1",
+  "description": "Leaflet Map with Places Hacker Schoolers Go",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "mongodb": "^1.4.19"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamwatters/hacker-school-places"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "leaflet",
+    "MongoDB",
+    "Hacker School",
+    "Map Box"
+  ],
+  "license": "MIT"
+}

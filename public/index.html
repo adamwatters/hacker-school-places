@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Hacker School Places</title>
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+
+    var map = L.map('map').setView([40.726, -73.99], 13);
+
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/adamwatters.k6f8n1o7/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18
+    }).addTo(map);
+
+    var FoodIcon = L.Icon.extend({
+        options: {
+            iconUrl: 'cutlery6.png',
+            iconSize:     [30, 30],
+            iconAnchor:   [15, 15],
+        }
+    });
+
+    var dumplings  = new FoodIcon();
+    var bahnMi = new FoodIcon();
+
+    L.icon = function (options) {
+        return new L.Icon(options);
+    };
+
+    var hackerSchoolIcon = L.icon({
+        iconUrl: 'https://d29xw0ra2h4o4u.cloudfront.net/assets/logo-no-text-a2a8595cdb277652f9f526f586f29f7f.png',
+        iconSize:     [28, 34], // size of the icon
+        iconAnchor:   [14, 17], // point of the icon which will correspond to marker's location
+    });
+
+    var hsMarker = L.marker([40.72074, -74.001098], {icon: hackerSchoolIcon}).addTo(map);
+    var dumplingMarker = L.marker([40.718, -73.99], {icon: dumplings}).addTo(map).bindPopup("dumplings!");
+    var bahnMiMarker = L.marker([40.72, -73.98], {icon: dumplings}).addTo(map).bindPopup("dumplings!");
+
+</script>
+</body>
+</html>

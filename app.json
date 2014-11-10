@@ -1,0 +1,7 @@
+{
+  "name": "Hacker-School-Places",
+  "description": "Leaflet Map with Places Hacker Schoolers Go",
+  "repository": "https://github.com/adamwatters/hacker-school-places",
+  "logo": "public/hackerschool.png",
+  "keywords": ["node", "express", "leaflet", "MongoDB", "Hacker School", "Map Box"]
+}
